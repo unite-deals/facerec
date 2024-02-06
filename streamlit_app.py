@@ -5,7 +5,24 @@ import face_recognition as frg
 import yaml 
 from utils import recognize, build_dataset
 # Path: code\app.py
-
+hide_github_link_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visiblity: hidden;}
+    header {visibility: hidden;}
+        .viewerBadge_container__1QSob {
+            display: none !important;
+        }
+    </style>
+"""
+st.markdown(hide_github_link_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 st.set_page_config(layout="wide")
 #Config
 cfg = yaml.load(open('config.yaml','r'),Loader=yaml.FullLoader)
