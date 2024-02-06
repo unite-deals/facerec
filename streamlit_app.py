@@ -5,6 +5,9 @@ import face_recognition as frg
 import yaml 
 from utils import recognize, build_dataset
 # Path: code\app.py
+
+st.set_page_config(layout="wide")
+
 hide_github_link_style = """
     <style>
     #MainMenu {visibility: hidden;}
@@ -23,7 +26,6 @@ hide_streamlit_style = """
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
-st.set_page_config(layout="wide")
 #Config
 cfg = yaml.load(open('config.yaml','r'),Loader=yaml.FullLoader)
 PICTURE_PROMPT = cfg['INFO']['PICTURE_PROMPT']
