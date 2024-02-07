@@ -5,7 +5,25 @@ import pickle
 from utils import submitNew, get_info_from_id, deleteOne
 import numpy as np
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
+hide_github_link_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visiblity: hidden;}
+    header {visibility: hidden;}
+        .viewerBadge_container__1QSob {
+            display: none !important;
+        }
+    </style>
+"""
+st.markdown(hide_github_link_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 st.title("Face Recognition App")
 st.write("This app is used to add new faces to the dataset")
 
