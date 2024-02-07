@@ -6,7 +6,7 @@ import yaml
 from utils import recognize, build_dataset
 # Path: code\app.py
 
-st.set_page_config(layout="wide")
+#st.set_page_config(layout="wide")
 
 hide_github_link_style = """
     <style>
